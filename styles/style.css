@@ -13,4 +13,116 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--main-font), sans-serif;
+  font-variation-settings: var(--weight-main-text-card);
+  background-image: var(--bg-firsr-gradient),var(--bg-second-gradient), var(--bg-third-gradient);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+ 
 }
+
+.box {
+  width: var(--width-box);
+}
+
+.header {
+  border: 2px solid #000000;
+  text-align: center;
+  background-color: var(--themes-background);
+  margin: 100px auto;
+  font-size: clamp(0.77rem, 2.5vw, 1.27rem);
+  font-family: var(--acent-font);
+  padding-top: clamp(120px, 50% ,130px);
+  padding-bottom: clamp(120px, 50% ,130px);
+}
+
+h1 {
+  padding-bottom: 20px;
+}
+
+
+.main {
+  background-color: var(--themes-background);
+  margin: 0 auto;
+}
+
+.card {
+  border: 2px solid #000000;
+  margin-bottom: 50px;
+}
+
+.image-container {
+  position: relative;
+}
+
+.label {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  z-index: 1;
+  background-color: transparent;
+  color: #000000;
+  font-weight: bold;
+  font-family: var(--acent-font);
+  mix-blend-mode: hard-light;
+  text-shadow: -1px -1px var(--stroke-color), 1px -1px var(--stroke-color),
+                 -1px 1px var(--stroke-color), 1px 1px var(--stroke-color);
+}
+
+@supports not (mix-blend-mode: hard-light) {
+  .label {
+    text-shadow: -1px -1px var(--stroke-color), 1px -1px var(--stroke-color),
+                 -1px 1px var(--stroke-color), 1px 1px var(--stroke-color);
+  }
+}
+
+p {
+  padding: var(--padding-p);
+
+}
+
+.picture {
+  object-fit: cover;
+  width: 100%;
+}
+
+.button {
+  background: none;
+  border: none;
+  padding-right: 25px;
+  padding-bottom: 25px;
+
+}
+
+.like-icon {
+  background: none;
+  border: none;
+  width: 27px;
+  height: 24px;
+  
+}
+
+.card__like-button {
+  background-color: var(--themes-background);
+  border: 2px solid #000000;
+}
+
+.button__text {
+  font-family: var(--acent-font);
+  font-weight: 400;
+  font-size: 14px;
+  padding: 12px 37px;
+}
+
+.button-floppy {
+  background: none;
+  border: 2px solid #000000;
+  font-family: var(--acent-font);
+}
+
+
+
+
+
