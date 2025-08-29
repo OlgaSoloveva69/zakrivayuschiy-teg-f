@@ -53,6 +53,7 @@ h1 {
   display: grid;
   grid-template-columns: 1fr auto auto;
   column-gap: 12px;
+  padding-bottom: 25px;
 }
 
 .image-container {
@@ -128,18 +129,22 @@ p {
   background: none;
   border: none;
   padding-right: 25px;
-  padding-bottom: 25px;
   justify-self: end;
+  align-self: center;
   grid-column: 3;
+  display: flex;
+  align-items: center;
 }
 
 .card__icon-button {
   background: none;
   border: none; 
-  padding-bottom: 25px;
   justify-self: end;
   align-self: center;
   grid-column: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .card__like-button,
@@ -193,10 +198,10 @@ p {
   transition: box-shadow 0.3s ease;
 }
 
-.like-icon:focus {
-  outline: none;
-  border: 2px solid #000000;
-  transition: box-shadow 0.3s ease;
+.card__icon-button:focus {
+  outline: 2px solid #000000;
+  outline-offset: 2px;
+  transition: outline 0.3s ease;
 }
 
 
