@@ -9,3 +9,18 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
+
+@keyframes heart-pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+.is-liked svg {
+  animation: heart-pop .4s ease;
+}
+
+.like-icon:hover svg {
+  transition: transform .15s ease;
+  transform: translateY(-1px);
+}
