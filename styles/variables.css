@@ -11,4 +11,9 @@
   --width-box: clamp(375px, 80%, 700px);
   --padding-p: 25px 25px 25px 25px;
   --stroke-color: rgb(255, 255, 255, 0.5);
+  --button-text-color: #FFFFFF;
+  --button-text-color-hover: #000000;
+  --color-main-body_core: transparent;
+  --color-contur: #000000;
+  --animation-fill-color: #FF0000;
 }

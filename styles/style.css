@@ -125,26 +125,11 @@ p {
   filter: grayscale(0.2) sepia(0.2) hue-rotate(12deg) contrast(1.15) brightness(1.05) saturate(1.25);
 }
 
-.button {
-  background: none;
-  border: none;
-  padding-right: 25px;
-  justify-self: end;
-  align-self: center;
-  grid-column: 3;
-  display: flex;
-  align-items: center;
-}
-
 .card__icon-button {
   background: none;
   border: none; 
-  justify-self: end;
-  align-self: center;
   grid-column: 2;
   display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .card__like-button,
@@ -153,6 +138,24 @@ p {
   background-color: var(--themes-background);
   border: 2px solid #000000;
   position: relative;
+  overflow: hidden;
+}
+
+button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out;
+  z-index: 1;
+}
+
+button:hover::before {
+  transform: translateX(0);
 }
 
 .button__text {
@@ -160,6 +163,10 @@ p {
   font-weight: 400;
   font-size: 14px;
   padding: 12px 37px;
+  position: relative;
+  z-index: 2;
+  color: var(--button-text-color);
+  mix-blend-mode: difference;
 }
 
 .button-floppy {
@@ -170,28 +177,31 @@ p {
   justify-self: center;
   grid-auto-flow: column;
   align-items: center;
+  position: relative;
+  overflow: hidden;
 }
 
-.card__like-button:hover {
+.button-floppy::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-color: #000000;
-  color: #FFFFFF;
-  cursor: url('../images/image_54.png'), pointer;
-  
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out;
 }
 
-.button-floppy-OK:hover {
-  cursor: url('../images/image_54.png'), pointer;
 
+.button-floppy-OK:hover,
+.button-floppy:hover,
+.card__like-button:hover {
+  cursor: url('../images/image_54.png'), pointer;
 }
 
 .card__like-button:focus,
 .button-floppy-OK:focus,
-.button-floppy:focus {
-  outline: none;
-  box-shadow: 2px 2px 0px #000000;
-  transition: box-shadow 0.3s ease;
-}
-
 .button-floppy:focus {
   outline: none;
   box-shadow: 2px 2px 0px #000000;
@@ -204,11 +214,14 @@ p {
   transition: outline 0.3s ease;
 }
 
+.core,
+.main-body {
+  fill: var(--color-main-body_core);
+}
 
-/* ? */
-.is-liked svg path {
-  fill: #FF0000;
-  stroke: #FF0000;
+.sparks {
+  fill: var(--animation-fill-color);
+  fill: transparent;
 }
 
 dialog {
