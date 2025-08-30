@@ -45,6 +45,7 @@ h1 {
   background-color: var(--themes-background);
   margin: 0 auto;
   padding-bottom: 100px;
+  
 }
 
 .card {
@@ -52,8 +53,8 @@ h1 {
   margin-bottom: 50px;
   display: grid;
   grid-template-columns: 1fr auto auto;
-  column-gap: 12px;
   padding-bottom: 25px;
+  padding-right: 25px;
 }
 
 .image-container {
@@ -193,7 +194,6 @@ button:hover::before {
   transition: transform 0.5s ease-in-out;
 }
 
-
 .button-floppy-OK:hover,
 .button-floppy:hover,
 .card__like-button:hover {
@@ -210,8 +210,8 @@ button:hover::before {
 
 .card__icon-button:focus {
   outline: 2px solid #000000;
-  outline-offset: 2px;
   transition: outline 0.3s ease;
+  margin: 0px 5px;
 }
 
 .core,
