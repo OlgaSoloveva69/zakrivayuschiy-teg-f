@@ -10,15 +10,13 @@
 */
 
 .page {
-  min-inline-size: 320px;
-  min-block-size: 100dvb;
+  height: 100vh;
   font-family: var(--main-font), sans-serif;
   font-variation-settings: var(--weight-main-text-card);
   background-image: var(--bg-firsr-gradient),var(--bg-second-gradient), var(--bg-third-gradient);
   background-attachment: fixed;
   background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-repeat: no-repeat; 
 }
 
 .box {
@@ -42,7 +40,7 @@ h1 {
 }
 
 .main {
-  background-color: var(--themes-background);
+  background-color: transparent;
   margin: 0 auto;
   padding-bottom: 100px;
   
@@ -54,7 +52,8 @@ h1 {
   display: grid;
   grid-template-columns: 1fr auto auto;
   padding-bottom: 25px;
-  padding-right: 25px;
+  /* padding-right: 25px; */
+  background-color: var(--themes-background);
 }
 
 .image-container {
@@ -130,12 +129,15 @@ p {
   background: none;
   border: none; 
   grid-column: 2;
-  display: flex;
+}
+.card__like-button {
+  width: 130px;
+  height: 38px;
+  margin-right: 25px;
 }
 
 .card__like-button,
 .button-floppy-OK {
-  inline-size: 100%;
   background-color: var(--themes-background);
   border: 2px solid #000000;
   position: relative;
@@ -172,7 +174,6 @@ p {
   font-family: var(--acent-font);
   font-weight: 400;
   font-size: 14px;
-  padding: 12px 37px;
   position: relative;
   z-index: 2;
   color: var(--button-text-color);
@@ -189,6 +190,7 @@ p {
   align-items: center;
   position: relative;
   overflow: hidden;
+  background-color: var(--themes-background);
 }
 
 .button-floppy::before {
@@ -217,9 +219,9 @@ p {
   filter: brightness(0) invert(1);
 }
 
-.card__like-button:focus,
-.button-floppy-OK:focus,
-.button-floppy:focus {
+.card__like-button:focus-visible,
+.button-floppy-OK:focus-visible,
+.button-floppy:focus-visible {
   outline: none;
   box-shadow: 2px 2px 0px #000000;
   transition: box-shadow 0.3s ease;
@@ -228,7 +230,9 @@ p {
 .card__icon-button:focus-visible {
   outline: 2px solid #000000;
   transition: outline 0.3s ease;
-  margin: 0px 5px;
+  padding: 0px;
+  margin-right: 6px;
+  /* margin: 0px 5px; */
 }
 
 .core,
