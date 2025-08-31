@@ -238,7 +238,6 @@ p {
 
 .sparks {
   fill: var(--animation-fill-color);
-  fill: transparent;
 }
 
 dialog {

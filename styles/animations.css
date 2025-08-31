@@ -65,13 +65,11 @@
 /* Искры по умолчанию невидимы */
 .sparks {
   opacity: 0;
-  transition: opacity 0.3s ease-in;
 }
 
 /* Анимация появления искр при лайке */
 .like-icon.is-liked .sparks {
-  opacity: 1;
-  transition-delay: 0.3s;
+  animation: sparks-opacity 0.3s ease-in 0.4s;
 }
 
 @keyframes heart-scale {
@@ -86,4 +84,14 @@
   }
 }
 
-
+@keyframes sparks-opacity {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
