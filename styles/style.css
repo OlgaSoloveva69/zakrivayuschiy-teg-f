@@ -213,6 +213,10 @@ p {
   transform: translateX(0);
 }
 
+.button-floppy:hover .floppy {
+  filter: brightness(0) invert(1);
+}
+
 .card__like-button:focus,
 .button-floppy-OK:focus,
 .button-floppy:focus {
