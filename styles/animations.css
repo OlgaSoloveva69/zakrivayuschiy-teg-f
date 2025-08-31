@@ -4,23 +4,86 @@
 ✦ like-icon — для svg-иконки анимированного сердца
 ✦ card__like-button — для кнопки Like рядом с иконкой
 ✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
 
-@keyframes heart-pop {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.15); }
-  100% { transform: scale(1); }
+.contour {
+  transition: fill 0.1s linear;
 }
 
-.is-liked svg {
-  animation: heart-pop .4s ease;
+.main-body {
+  fill: transparent;
+  transition: fill 0.3s linear;
 }
 
-.like-icon:hover svg {
-  transition: transform .15s ease;
-  transform: translateY(-1px);
+.core {
+  fill: transparent;
+  transition: fill 0.3s linear 0.03s;
 }
+
+.like-icon:hover .core {
+  fill: var(--color-contur);
+  transition-delay: 0s;
+}
+
+.like-icon:hover .main-body {
+  fill: var(--color-contur);
+  transition-delay: 0.05s;
+}
+
+.like-icon:active .core {
+  fill: var(--animation-fill-color);
+  transition-delay: 0s;
+}
+
+.like-icon:active .main-body {
+  fill: var(--animation-fill-color);
+  transition-delay: 0.05s;
+}
+
+.like-icon.is-liked .core {
+  fill: var(--animation-fill-color);
+  transition-delay: 0s;
+}
+
+.like-icon.is-liked .main-body {
+  fill: var(--animation-fill-color);
+  transition-delay: 0.05s;
+}
+
+.like-icon.is-liked .contour {
+  fill: var(--animation-fill-color);
+  transition-delay: 0.1s;
+}
+
+.like-icon.is-liked .heart {
+  animation: heart-scale 0.3s ease-in 0.1s;
+}
+
+/* Искры по умолчанию невидимы */
+.sparks {
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+
+/* Анимация появления искр при лайке */
+.like-icon.is-liked .sparks {
+  opacity: 1;
+  transition-delay: 0.3s;
+}
+
+@keyframes heart-scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+

@@ -142,12 +142,8 @@ p {
   overflow: hidden;
 }
 
-.button-floppy-OK {
-  grid-row: 2;
-  grid-column: span 2;
-}
-
-button::before {
+.card__like-button::before,
+.button-floppy-OK::before {
   content: '';
   position: absolute;
   top: 0;
@@ -160,9 +156,17 @@ button::before {
   z-index: 1;
 }
 
-button:hover::before {
+.card__like-button:hover::before,
+.button-floppy-OK:hover::before {
   transform: translateX(0);
 }
+
+.button-floppy-OK {
+  grid-row: 2;
+  grid-column: span 2;
+}
+
+
 
 .button__text {
   font-family: var(--acent-font);
@@ -203,6 +207,10 @@ button:hover::before {
 .button-floppy:hover,
 .card__like-button:hover {
   cursor: url('../images/image_54.png'), pointer;
+}
+
+.button-floppy:hover::before {
+  transform: translateX(0);
 }
 
 .card__like-button:focus,
@@ -254,7 +262,8 @@ dialog[open] {
 }
 
 .dialog__icon {
-  
+  display: block;
+  margin: auto;
 }
 
 .dialog__content {
@@ -270,12 +279,17 @@ dialog[open] {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
-    gap: 16px;
+    /* gap: 16px; */
     align-items: center;
     justify-items: center;
     text-align: center;
   }
+  .floppy {
+    margin-top: 17px;
+  }
+
 }
+
 
 
 
