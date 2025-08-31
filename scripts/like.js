@@ -39,3 +39,11 @@ function setButtonText(heart, button) {
     );
   }
 }
+
+// Функциональность для диалогового окна
+const dialog = document.getElementById('dialog-id');
+const okButton = dialog.querySelector('.button-floppy-OK');
+
+okButton.addEventListener('click', () => {
+  dialog.close();
+});
