@@ -29,7 +29,7 @@
   background-color: var(--themes-background);
   margin: 100px auto;
   font-family: var(--acent-font);
-  padding-top: clamp(120px, 100% ,130px);
+  padding-top: clamp(120px, 20vw ,130px);
   padding-bottom: clamp(120px, 100% ,127px);
 }
 
@@ -39,7 +39,7 @@ h1 {
 }
 
 h2 {
-  font-size: clamp(14px, 6vw, 23px);
+  font-size: clamp(14px, 2vw, 23px);
   text-transform: uppercase;
 }
 
@@ -55,7 +55,7 @@ h3 {
 }
 
 .card {
-  border: 2px solid #000000;
+  border: 2.5px solid #000000;
   margin-bottom: 50px;
   display: grid;
   grid-template-columns: 1fr auto auto;
@@ -102,10 +102,7 @@ p {
 }
 
 .picture {
-  border-width: 2px, 0px, 2px, 0px;
-  border-style: solid;
-  border-color: #000000;
-  object-fit: cover;
+  border: none;
   width: 100%;
 }
 
