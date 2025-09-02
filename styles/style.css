@@ -16,8 +16,7 @@
   background-image: var(--bg-firsr-gradient),var(--bg-second-gradient), var(--bg-third-gradient);
   background-attachment: fixed;
   background-size: cover;
-  background-repeat: no-repeat; 
-  inline-size: clamp(375px, 100%, 1440px);
+  background-repeat: no-repeat;
 }
 
 .box {
