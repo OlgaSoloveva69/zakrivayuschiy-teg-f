@@ -30,7 +30,7 @@
   margin: 100px auto;
   font-family: var(--acent-font);
   padding-top: clamp(120px, 20vw ,130px);
-  padding-bottom: clamp(120px, 100% ,127px);
+  padding-bottom: clamp(120px, 20vw ,127px);
 }
 
 h1 {
@@ -44,6 +44,7 @@ h2 {
 }
 
 h3 {
+  grid-column: span 3;
   font-size: 18px;
   padding-left: 10px;
   line-height: 170%;
@@ -59,7 +60,7 @@ h3 {
   margin-bottom: 50px;
   display: grid;
   grid-template-columns: 1fr auto auto;
-  padding-bottom: 24px;
+  padding-bottom: 22px;
   background-color: var(--themes-background);
 }
 
@@ -95,10 +96,7 @@ p {
   padding: var(--padding-p);
   grid-column: 1 / -1;
   font-size: clamp(14px, 6vw, 18px);
-  line-height: clamp(18px, 2vw, 21px);;
-  /* font-size: 18px;
-  line-height: 21px; */
-  
+  line-height: clamp(18px, 2vw, 21px);
 }
 
 .picture {
@@ -145,6 +143,7 @@ p {
   padding-top: 20px;
   
 }
+
 .card__like-button {
   width: 130px;
   height: 38px;
@@ -182,6 +181,7 @@ p {
 .button-floppy-OK {
   grid-row: 2;
   grid-column: span 2;
+  padding: 12px;
 }
 
 
@@ -208,7 +208,7 @@ p {
   position: relative;
   overflow: hidden;
   background-color: var(--themes-background);
-  padding: 20px;
+  padding: 15px;
 }
 
 .button-floppy::before {
@@ -305,11 +305,11 @@ dialog[open] {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
-    /* gap: 16px; */
     align-items: center;
     justify-items: center;
     text-align: center;
   }
+
   .floppy {
     margin-top: 17px;
   }
