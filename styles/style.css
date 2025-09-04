@@ -107,9 +107,6 @@ p {
 }
 
 .picture {
-  border-width: 2px, 0px, 2px, 0px;
-  border-style: solid;
-  border-color: #000000;
   object-fit: cover;
   width: 100%;
 }
@@ -304,8 +301,7 @@ dialog[open] {
   grid-template-columns: min-content 1fr;
   grid-template-rows: 1fr min-content;
   gap: 16px 16px;
-  width: 353px;
-  overflow-x: hidden;
+  /* width: 353px; */
 
 }
 
