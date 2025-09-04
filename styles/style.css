@@ -11,12 +11,13 @@
 
 .page {
   height: 100vh;
-  font-family: var(--main-font), "Cera", sans-serif;
-  font-variation-settings: "wght" var(--weight-main-text-card);
+  font-family: var(--main-font), sans-serif;
+  font-variation-settings: var(--weight-main-text-card);
   background-image: var(--bg-firsr-gradient),var(--bg-second-gradient), var(--bg-third-gradient);
   background-attachment: fixed;
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; 
+  /* inline-size: clamp(375px, 100%, 1440px); */
 }
 
 .box {
@@ -25,33 +26,30 @@
 
 .header {
   border: 2px solid #000000;
-  text-align: center;
   background-color: var(--themes-background);
   margin: 100px auto;
-  font-family: var(--acent-font), "Roboto", "fantasy";
-  padding-top: clamp(120px, 20vw ,130px);
-  padding-bottom: clamp(120px, 20vw ,127px);
+  font-family: var(--acent-font);
+  height: clamp(327px, 16vw, 370px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.logo {
-  padding-bottom: 18px;
+h1 {
+  padding-bottom: 21px;
   font-size: clamp(49px, 6vw, 65px);
 }
 
-.header_logo {
+h2 {
   font-size: clamp(14px, 2vw, 23px);
   text-transform: uppercase;
-  padding-top: 18px;
-  font-variation-settings: "wght" var(--weight-main-text-card);
-  
 }
 
-.title {
-  grid-column: span 3;
-  font-size: clamp(14px, 2vw, 18px);
+h3 {
+  font-size: clamp(14px, 6vw, 18px);
   padding-left: 10px;
-  line-height: 170%;
-  font-variation-settings: "wght" var(--weight-heading-text-card);
+  line-height: 160%;
 }
 
 .main {
@@ -60,11 +58,11 @@
 }
 
 .card {
-  border: 2.5px solid #000000;
+  border: 2px solid #000000;
   margin-bottom: 50px;
   display: grid;
   grid-template-columns: 1fr auto auto;
-  padding-bottom: 22px;
+  padding-bottom: 24px;
   background-color: var(--themes-background);
 }
 
@@ -80,9 +78,8 @@
   z-index: 1;
   background-color: transparent;
   color: #000000;
-  opacity: 50%;
   font-weight: bold;
-  font-family: var(--acent-font), "Roboto", "fantasy";
+  font-family: var(--acent-font);
   mix-blend-mode: hard-light;
   text-shadow: -1px -1px var(--stroke-color), 1px -1px var(--stroke-color),
                  -1px 1px var(--stroke-color), 1px 1px var(--stroke-color);
@@ -97,49 +94,53 @@
   }
 }
 
-.card-text {
+p {
   padding: var(--padding-p);
   grid-column: 1 / -1;
   font-size: clamp(14px, 6vw, 18px);
-  line-height: clamp(18px, 2vw, 21px);
+  line-height: clamp(18px, 2vw, 21px); 
 }
 
 .picture {
-  border: none;
+  border-width: 2px, 0px, 2px, 0px;
+  border-style: solid;
+  border-color: #000000;
+  object-fit: cover;
   width: 100%;
 }
 
-.picture-sepia {
+.picture-warm {
   filter: sepia(0.6) saturate(1.2) contrast(1.05);
 }
 
-.picture-brightness {
+.picture-blank {
   filter: brightness(1.15) contrast(0.9) saturate(0.8);
 }
 
-.picture-hue-rotate {
+.picture-anxious {
   filter: hue-rotate(-15deg) contrast(1.25) saturate(1.3);
 }
 
-.picture-drop-shadow {
+.picture-ideal {
   filter: contrast(1.35) brightness(1.05) saturate(1.4) drop-shadow(0 2px 0 rgba(0,0,0,0.15));
 }
 
-.picture-saturate {
+.picture-friends {
   filter: saturate(1.8) brightness(1.1);
 }
 
-.picture-grayscale {
+.picture-strategy {
   filter: grayscale(0.6) contrast(1.2);
 }
 
-.picture-blur {
+.picture-focus {
   filter: blur(1px) contrast(1.15) saturate(1.2);
 }
 
-.picture-contrast {
+.picture-now {
   filter: grayscale(0.2) sepia(0.2) hue-rotate(12deg) contrast(1.15) brightness(1.05) saturate(1.25);
 }
+
 
 .card__icon-button {
   background: none;
@@ -148,7 +149,6 @@
   padding-top: 20px;
   
 }
-
 .card__like-button {
   width: 130px;
   height: 38px;
@@ -186,13 +186,14 @@
 .button-floppy-OK {
   grid-row: 2;
   grid-column: span 2;
-  padding: 12px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 
 
 .button__text {
-  font-family: var(--acent-font), "Roboto", "fantasy";
+  font-family: var(--acent-font);
   font-weight: 400;
   font-size: 14px;
   position: relative;
@@ -206,14 +207,19 @@
   display: grid;
   background: none;
   border: 2px solid #000000;
-  font-family: var(--acent-font), "Roboto", "fantasy";
+  font-family: var(--acent-font);
   justify-self: center;
   grid-auto-flow: column;
   align-items: center;
   position: relative;
   overflow: hidden;
   background-color: var(--themes-background);
-  padding: 15px;
+  padding: 10px 15px;
+  font-size: clamp(14px, 6vw, 18px);
+}
+
+.floppy {
+  padding-right: 7px;
 }
 
 .button-floppy::before {
@@ -255,7 +261,6 @@
   transition: outline 0.3s ease;
   padding: 0px;
   margin-right: 6px;
-  /* margin: 0px 5px; */
 }
 
 .core,
@@ -268,11 +273,10 @@
 }
 
 dialog {
-  width: clamp(341px, 30vw, 353px);
   display: grid;
   border: 2px solid #000;
-  padding: 24px;
-  width: min(90vw, 480px);
+  /* padding: 24px; */
+  
   background: var(--themes-background);
 }
 
@@ -286,10 +290,12 @@ dialog:not([open]) {
 
 dialog[open] {
   display: grid;
-  grid-template-columns: 64px 1fr;
+  grid-template-columns: min-content 1fr;
   grid-template-rows: 1fr min-content;
   gap: 16px 16px;
-  align-items: start;
+  width: 353px;
+  overflow-x: hidden;
+
 }
 
 .dialog__icon {
@@ -298,23 +304,26 @@ dialog[open] {
 }
 
 .dialog__content {
-  font-family: var(--acent-font), "Roboto", "fantasy";
+  font-family: var(--acent-font);
   margin-bottom: 12px;
   text-transform: uppercase;
-  line-height: 1.4;
   grid-column: 2;
+  line-height: 150%;
+  padding: auto;
+  
 }
 
 @media (width <= 375px) {
+
   .button-floppy {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
+    /* gap: 16px; */
     align-items: center;
     justify-items: center;
     text-align: center;
   }
-
   .floppy {
     margin-top: 17px;
   }
