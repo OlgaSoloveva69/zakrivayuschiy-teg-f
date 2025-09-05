@@ -44,7 +44,7 @@
 .header_logo {
   font-size: clamp(14px, 2vw, 23px);
   text-transform: uppercase;
-  padding-top: 18px;
+  /* padding-top: 18px; */
   font-variation-settings: "wght" var(--weight-main-text-card);
   
 }
