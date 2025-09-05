@@ -180,6 +180,7 @@ p {
   border: 2px solid #000000;
   position: relative;
   overflow: hidden;
+  color: var(--button-text-color);
 }
 
 .button::before {
@@ -212,7 +213,6 @@ p {
   font-size: 14px;
   position: relative;
   z-index: 2;
-  color: var(--button-text-color);
   mix-blend-mode: difference;
   top: 2px;
 }
@@ -220,13 +220,11 @@ p {
 .floppy {
   padding-right: 7px;
   z-index: 2;
-  color: var(--button-text-color);
   mix-blend-mode: difference;
 }
 
 .button-floppy {
   display: grid;
-  background: none;
   border: 2px solid #000000;
   font-family: var(--acent-font), 'Arial', sans-serif;
   justify-self: center;
@@ -234,7 +232,6 @@ p {
   align-items: center;
   position: relative;
   overflow: hidden;
-  background-color: var(--themes-background);
   padding: 10px 15px;
   font-size: clamp(14px, 6vw, 18px);
 }
@@ -309,9 +306,6 @@ dialog[open] {
   line-height: 150%;
 }
 
-.text-dialog {
-  
-}
 
 @media (width <= 375px) {
 
