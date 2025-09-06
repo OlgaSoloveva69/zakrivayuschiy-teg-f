@@ -16,8 +16,7 @@
   background-image: var(--bg-firsr-gradient),var(--bg-second-gradient), var(--bg-third-gradient);
   background-attachment: fixed;
   background-size: cover;
-  background-repeat: no-repeat; 
-  /* inline-size: clamp(375px, 100%, 1440px); */
+  background-repeat: no-repeat;
 }
 
 .box {
@@ -49,7 +48,7 @@
 }
 
 .title {
-  padding: 4.5px 9.5px 3px;
+  padding: 4.5px 9.5px 4px;
   grid-column: span 3;
   font-size: 18px;
   line-height: 22px;
@@ -62,20 +61,12 @@
 }
 
 .card {
-  border: 2.5px solid #000000;
+  border: 2px solid #000000;
   margin-bottom: 50px;
   display: grid;
   grid-template-columns: 1fr auto auto;
   padding-bottom: 25px;
   background-color: var(--themes-background);
-}
-
-.image-container {
-  display: flex;
-  position: relative;
-  grid-column: 1 / -1;
-  border-top: 1.5px solid #000000;
-  border-bottom: 1.5px solid #000000;
 }
 
 .label {
@@ -109,6 +100,14 @@
   grid-column: 1 / -1;
   font-size: 18px;
   line-height: 21px; 
+}
+
+.image-container {
+  display: flex;
+  position: relative;
+  grid-column: 1 / -1;
+  border-top: 2px solid #000000;
+  border-bottom: 2px solid #000000;
 }
 
 .picture {
@@ -215,7 +214,6 @@
   position: relative;
   z-index: 2;
   mix-blend-mode: difference;
-  top: 2px;
 }
 
 .floppy {
@@ -233,7 +231,7 @@
   align-items: center;
   position: relative;
   overflow: hidden;
-  padding: 17px 20px;
+  padding: 10px 20px;
 }
 
 .button-floppy::before {
@@ -316,13 +314,16 @@ dialog[open] {
   .button-floppy {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto auto;
     align-items: center;
     justify-items: center;
     text-align: center;
+    gap: 8px;
+    padding: 17px 20px;
   }
+
   .floppy {
-    margin-top: 17px;
+    padding: 0px;
   }
 
 }
