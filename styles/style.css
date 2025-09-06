@@ -10,9 +10,9 @@
 */
 
 .page {
-  height: 100vh;
+  min-height: 100vh;
   font-family: var(--main-font), 'Arial', sans-serif;
-  font-variation-settings: var(--weight-main-text-card);
+  font-variation-settings: "wght" var(--weight-main-text-card);
   background-image: var(--bg-firsr-gradient),var(--bg-second-gradient), var(--bg-third-gradient);
   background-attachment: fixed;
   background-size: cover;
@@ -42,9 +42,7 @@
 
 .header_logo {
   font-size: clamp(14px, 2vw, 23px);
-  text-transform: uppercase;
-  font-variation-settings: "wght" var(--weight-main-text-card);
-  
+  text-transform: uppercase;  
 }
 
 .title {
@@ -86,10 +84,11 @@
   font-size: 14px;
 }
 
-@supports not (mix-blend-mode: hard-light) {
+@supports((text-stroke 1px --stroke-color)or (-webkit-text-stroke: 1px --stroke-color;)) {
   .label {
-    text-shadow: -1px -1px var(--stroke-color), 1px -1px var(--stroke-color),
-                 -1px 1px var(--stroke-color), 1px 1px var(--stroke-color);
+    -webkit-text-stroke: 1px --stroke-color;
+    text-stroke: 1px --stroke-color;
+    text-shadow: none;
   }
 }
 
@@ -99,7 +98,6 @@
   padding-right: 26px;
   grid-column: 1 / -1;
   font-size: 18px;
-  line-height: 21px; 
 }
 
 .image-container {
@@ -200,13 +198,6 @@
   transform: translateX(0);
 }
 
-.button-floppy-OK {
-  grid-row: 2;
-  grid-column: span 2;
-  padding-top: 12px;
-  padding-bottom: 12px;
-}
-
 .button__text {
   font-family: var(--acent-font), 'Arial', sans-serif;
   font-weight: 400;
@@ -232,11 +223,11 @@
   position: relative;
   overflow: hidden;
   padding: 10px 20px;
+  margin-bottom: 100px;
 }
 
 .button-floppy::before {
   content: '';
-  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -248,10 +239,6 @@
 
 .button:hover {
   cursor: url('../images/image_54.png'), pointer;
-}
-
-.button-floppy:hover::before {
-  transform: translateX(0);
 }
 
 .button:focus-visible {
@@ -270,7 +257,7 @@
 }
 
 dialog {
-  padding: 30px 40px;
+  padding: 30px 30px;
   display: grid;
   border: 2px solid #000;
   background: var(--themes-background);
@@ -297,28 +284,29 @@ dialog[open] {
   margin: auto;
 }
 
-.dialog__content {
-  font-family: var(--acent-font), 'Arial', sans-serif;
-  text-transform: uppercase;
-  grid-column: 2;
-  line-height: 150%;
+.button-floppy-OK {
+  grid-column: span 2;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 .text-dialog {
-  padding: 0px;
+  line-height: 21px;
+  font-family: var(--acent-font), 'Arial', sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
 }
 
 
-@media (width <= 375px) {
-
+@media (max-device-width: 375px) {
   .button-floppy {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
+    grid-template-rows: 1fr 1fr;
     align-items: center;
     justify-items: center;
     text-align: center;
-    gap: 8px;
+    gap: 5px;
     padding: 17px 20px;
   }
 
@@ -326,6 +314,10 @@ dialog[open] {
     padding: 0px;
   }
 
+  dialog {
+    padding: 30px 38px;
+    max-width: 341px;
+  }
 }
 
 
