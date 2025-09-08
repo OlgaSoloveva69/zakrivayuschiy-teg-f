@@ -42,7 +42,7 @@
 
 .header_logo {
   font-size: clamp(14px, 2vw, 23px);
-  text-transform: uppercase;  
+  text-transform: uppercase;
 }
 
 .title {
@@ -98,7 +98,7 @@
   padding-right: 26px;
   grid-column: 1 / -1;
   font-size: 18px;
-  line-height: 21px; 
+  line-height: 21px;
 }
 
 .image-container {
@@ -146,10 +146,9 @@
   filter: grayscale(0.2) sepia(0.2) hue-rotate(12deg) contrast(1.15) brightness(1.05) saturate(1.25);
 }
 
-
 .card__icon-button {
   background: none;
-  border: none; 
+  border: none;
   grid-column: 1/2;
   width: 39px;
   height: 38px;

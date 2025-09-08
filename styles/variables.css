@@ -3,7 +3,7 @@
   --main-font: "Inter-Variable", "sans-serif";
   --acent-font: "PressStart2P", "fantasy";
   --weight-main-text-card: 410;
-  --weight-heading-text-card: 715; 
+  --weight-heading-text-card: 715;
   --bg-firsr-gradient: repeating-linear-gradient(to right, #d3d3d3 0px 2px, transparent 2px 4px);
   --bg-second-gradient: repeating-linear-gradient(to bottom, #d3d3d3 0px 2px, transparent 2px 4px);
   --bg-third-gradient: linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
