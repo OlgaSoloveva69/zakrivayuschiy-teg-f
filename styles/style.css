@@ -84,10 +84,10 @@
   font-size: 14px;
 }
 
-@supports((text-stroke 1px --stroke-color)or (-webkit-text-stroke: 1px --stroke-color;)) {
+@supports (text-stroke: 1px var(--stroke-color))or (-webkit-text-stroke: 1px var(--stroke-color)) {
   .label {
-    -webkit-text-stroke: 1px --stroke-color;
-    text-stroke: 1px --stroke-color;
+    -webkit-text-stroke: 1px var(--stroke-color);
+    text-stroke: 1px var(--stroke-color);
     text-shadow: none;
   }
 }
@@ -216,26 +216,15 @@
 
 .button-floppy {
   display: grid;
-  border: 2px solid #000000;
-  font-family: var(--acent-font), 'Arial', sans-serif;
+  /* border: 2px solid #000000; */
+  /* font-family: var(--acent-font), 'Arial', sans-serif; */
   justify-self: center;
   grid-auto-flow: column;
   align-items: center;
-  position: relative;
-  overflow: hidden;
-  padding: 10px 20px;
+  /* position: relative; */
+  /* overflow: hidden; */
+  padding: 12px 20px;
   margin-bottom: 100px;
-}
-
-.button-floppy::before {
-  content: '';
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #000000;
-  transform: translateX(-100%);
-  transition: transform 0.5s ease-in-out;
 }
 
 .button:hover {
@@ -299,7 +288,7 @@ dialog[open] {
 }
 
 
-@media (max-device-width: 375px) {
+@media (max-width: 376px) {
   .button-floppy {
     display: grid;
     grid-template-columns: 1fr;
